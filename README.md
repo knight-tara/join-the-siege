@@ -2,7 +2,7 @@
 
 ## Initial Thoughts - Limitations
 - **very** user dependent as assumes users utilise consistent naming conventions for files and also name files correctly (i.e bank_statement_1 is actually a bank statement)
-- no centralised list of classifications: hard coded in if statement, not scalable and difficult to maintain (valid file types also difficult to maintain)
+- no centralised list of classifications (hard coded in if statement, not scalable and difficult to maintain - valid file types also difficult to maintain)
 - no testing of classification function
 - no Dockerfile for easy deployment
 
