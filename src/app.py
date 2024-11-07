@@ -1,14 +1,15 @@
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 
 from src.classifier import classify_file
+from src.validate_file_type import allowed_file
+
+load_dotenv()
+
 app = Flask(__name__)
 
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg'}
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 @app.route('/classify_file', methods=['POST'])
+
 def classify_file_route():
 
     if 'file' not in request.files:
