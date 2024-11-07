@@ -23,7 +23,7 @@ Given time constraints of the challenge, focused on removing user dependency in 
 - add logic to convert additional file types to text (as ideally want the classifier to work across as many file types as possible
 - look into extracting classifications / valid file types into a database as a central source of truth across all related applications
 - utilitise python-magic library to determine file type for more accurate validation (from a quick search, seemed like this was the best option)
-- refactor codebase using SOLID principles
+- refactor codebase using SOLID principles and improve error handling
 - add a Dockerfile and set up a CI/CD pipeline for automated deployment
 
 ## Instructions:
