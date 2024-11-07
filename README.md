@@ -2,7 +2,7 @@
 
 ## Initial Thoughts - Limitations
 - **very** user dependent as assumes users utilise consistent naming conventions for files and also name files correctly (i.e bank_statement_1 is actually a bank statement)
-- no centralised list of classifications: hard coded in if statement, not scalable and difficult to maintain (allowed file extensions also difficult to maintain) - could this information be extracted into a DB for use across multiple applications?
+- no centralised list of classifications: hard coded in if statement, not scalable and difficult to maintain (valid file types also difficult to maintain)
 - no testing of classification function
 - no Dockerfile for easy deployment
 
@@ -15,13 +15,13 @@ Given time constraints of the challenge, focused on removing user dependency in 
 4. tested API calls using the example files and iterated the prompt until desired output / output format was returned
 5. researched tests for pypdf, pytesseract and openai
 
-**Note:** made decision not to include file name as a first step in the classification process as in my experience, files sent from vendors usually have obscure names plus I don't think file name validation would be an amazing UX, especially at higher volumes (could be wrong here!). However, it would remove the need for sending API calls with every document processed, so may be something to consider
+**Note:** made decision not to include file name as a first step in the classification process as in my experience, files sent from vendors usually have obscure names plus I don't think file name validation would be an amazing UX, especially at higher volumes (could be wrong here!). However, it would remove the need to send an API call with every document, so may be something to consider
 
 ## Improvements / Next Steps:
 - write tests to cover classifier functionality (relevant github repos commented as placeholders in file)
 - improve Open AI prompt i.e how can I add more classifications in a scalable way
-- add logic to convert additional file types to text, as ideally want the classifier to work across as many file types as possible
-- look into extracting classifications / file types into a database as a central source of truth across all related applications
+- add logic to convert additional file types to text (as ideally want the classifier to work across as many file types as possible_
+- look into extracting classifications / valid file types into a database as a central source of truth across all related applications
 - utilitise python-magic library to determine file type for more accurate validation (from a quick search, seemed like this was the best option)
 - refactor codebase using SOLID principles
 - add a Dockerfile and set up a CI/CD pipeline for automated deployment
