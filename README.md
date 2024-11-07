@@ -1,6 +1,6 @@
 # Heron Coding Challenge - File Classifier
 
-## Initial thoughts - limitations
+## Initial Thoughts - Limitations
 - **very** user dependent as assumes users utilise consistent naming conventions for files and also name files correctly (i.e bank_statement_1 is actually a bank statement)
 - no centralised list of classifications: hard coded in if statement, not scalable and difficult to maintain (allowed file extensions also difficult to maintain) - could this information be extracted into a DB for use across multiple applications?
 - no testing for classifications
@@ -15,7 +15,7 @@ Given time constraints of the challenge, focused on removing user dependency in 
 4. tested API calls using the example files and iterated the prompt until desired output / output format was returned
 5. researched tests for pypdf, pytesseract and openai
 
-Note: made decision not to include file name as a first step in the classification process as in my experience, files sent from vendors usually have obscure names plus I don't think file name validation would be an amazing UX, especially at higher volumes (could be wrong here!). However, it would remove the need for sending API calls with every document processed, so may be something to consider
+**Note:** made decision not to include file name as a first step in the classification process as in my experience, files sent from vendors usually have obscure names plus I don't think file name validation would be an amazing UX, especially at higher volumes (could be wrong here!). However, it would remove the need for sending API calls with every document processed, so may be something to consider
 
 ## Improvements / Next Steps:
 - write tests to cover classifier functionality (relevant github repos commented as placeholders in file)
