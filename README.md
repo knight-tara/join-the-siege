@@ -3,7 +3,7 @@
 ## Initial Thoughts - Limitations
 - **very** user dependent as assumes users utilise consistent naming conventions for files and also name files correctly (i.e bank_statement_1 is actually a bank statement)
 - no centralised list of classifications: hard coded in if statement, not scalable and difficult to maintain (allowed file extensions also difficult to maintain) - could this information be extracted into a DB for use across multiple applications?
-- no testing for classifications
+- no testing of classification function
 - no Dockerfile for easy deployment
 
 ## Approach
